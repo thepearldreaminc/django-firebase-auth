@@ -20,11 +20,11 @@ Install via pip::
 Quick start
 -----------
 
-1. Add "firebase-auth" to your INSTALLED_APPS setting like this::
+1. Add "firebase_auth" to your INSTALLED_APPS setting like this::
 
     INSTALLED_APPS = [
         ...
-        'firebase-auth',
+        'firebase_auth',
     ]
 
 2. Specify a location for your Firebase keyfile with the settings::
@@ -37,12 +37,12 @@ Quick start
 3. Either set FirebaseAuthentication as the global default authentication class in settings, like::
     
     REST_FRAMEWORK = {
-        'DEFAULT_AUTHENTICATION_CLASSES': ('firebase-auth.authentication.FirebaseAuthentication', ),
+        'DEFAULT_AUTHENTICATION_CLASSES': ('firebase_auth.authentication.FirebaseAuthentication', ),
     }
 
    Or extend specific views from FirebaseAuthMixin, like::
 
-    from firebase-auth import FirebaseAuthMixin
+    from firebase_auth import FirebaseAuthMixin
     class MyModelViewSet(FirebaseAuthMixin, viewsets.ModelViewSet)
         ...
     
